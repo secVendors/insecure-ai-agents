@@ -23,9 +23,15 @@ Creates two worker agents supervised by another. One worker agent has access to 
 https://smith.langchain.com/public/c132eb00-22f3-436c-87a1-3b8feca03a60/r
 
 
-## Call for Code Review
-Code review welcome from AI engineers that work with these frameworks more often than I do!
+## Security Review
+Explanation of the code and the vulnerabilities:
+https://secvendors.notion.site/Building-a-Multi-AI-Agent-System-16e3ec3e1cfe80c295fbc46e0ee40cf6
 
+Walkthrough of the exploits in the code and how to fix them:
+https://secvendors.notion.site/Exploiting-a-Multi-Agent-System-1713ec3e1cfe80f396adfbbe4cb483cd?pvs=73
 
-## Security Review Coming Soon!
-An in depth security review of this code is coming. I wrote this for fun and to use it as a way to showcase certain security concerns for AI Agents. I plan to submit it to OWASP as an insecure code sample which will be used to create security guidance on AI Agents.
+### Prompt Injection
+See a [video demo](https://x.com/vtahowe/status/1876364269962584271) of prompt injection done on this multi agent system
+
+### Excessive Agency
+See a [video demo](https://x.com/vtahowe/status/1876755660202749969) of excessive agency done on this multi agent system
