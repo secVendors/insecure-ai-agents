@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "insecure-ai-agents"
+version = "0.1.0"
+description = ""
+authors = ["allie_secvendors <allie@secvendors.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+langchain = "^0.3.13"
+openai = "^1.58.1"
+langchain-community = "^0.3.13"
+langchain-openai = "^0.2.14"
+faker = "^33.1.0"
+apify-client = "^1.8.1"
+bs4 = "^0.0.2"
+faiss-cpu = "^1.9.0.post1"
+langgraph = "^0.2.60"
+playwright = "^1.49.1"
+lxml = "^5.3.0"
+nest-asyncio = "^1.6.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
