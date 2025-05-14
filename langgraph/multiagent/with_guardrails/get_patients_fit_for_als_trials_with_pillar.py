@@ -13,6 +13,7 @@ from langgraph.graph import StateGraph, START, END
 from langgraph.types import Command
 from langchain_core.messages import HumanMessage
 from langgraph.prebuilt import create_react_agent
+from pillar import Pillar
 
 
 # allow tracing via LangSmith for observability and debugging
@@ -35,6 +36,11 @@ members = ["clinical_researcher", "database_admin"]
 # Our team supervisor is an LLM node. It picks the next agent to process
 # and decides when the work is completed
 options = members + ["FINISH"]
+
+pillar = Pillar(
+	api_key='ps_app_O6IlTyA2LgiaJYkxAqf5iQ0nSyw5FcPs4DCGJp4oRTsg0zrW',
+	#url='https://api.pillar.security' # Optional
+)
 
 
 class Router(TypedDict):

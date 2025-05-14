@@ -21,6 +21,14 @@ lxml = "^5.3.0"
 nest-asyncio = "^1.6.0"
 haizelabs = "^0.0.4"
 pytest = "^8.3.4"
+pydantic-ai = {extras = ["mcp"], version = "^0.0.55"}
+fastapi = "^0.115.11"
+opentelemetry-instrumentation-asgi = "^0.52b0"
+logfire = {extras = ["fastapi"], version = "^3.8.1"}
+python-multipart = "^0.0.20"
+uvicorn = "^0.34.0"
+agentic-radar = "^0.6.0"
+pillar-security = "^1.0.6"
 
 
 [build-system]

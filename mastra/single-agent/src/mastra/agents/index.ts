@@ -4,6 +4,7 @@ import { Memory } from '@mastra/memory';
 import { LibSQLStore } from '@mastra/libsql';
 import { weatherTool } from '../tools';
 import { MCPClient } from '@mastra/mcp';
+import { xai } from '@ai-sdk/xai';
 
 export const weatherAgent = new Agent({
   name: 'Weather Agent',
@@ -58,6 +59,6 @@ export const movePlannerAgent = new Agent({
   You can use the web_search tool to get information on cost of living.
   `,
   tools: { weatherTool, ...(await web_search.getTools()) },
-  model: openai("gpt-4o"),
+  model: xai('grok-3'),
   memory: new Memory(),
 });

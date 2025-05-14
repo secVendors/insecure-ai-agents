@@ -13,6 +13,7 @@ from langgraph.graph import StateGraph, START, END
 from langgraph.types import Command
 from langchain_core.messages import HumanMessage
 from langgraph.prebuilt import create_react_agent
+from pillar import Pillar
 
 
 # allow tracing via LangSmith for observability and debugging
@@ -67,6 +68,7 @@ def create_clinical_research_agent():
 
     clinical_research_tools = clinical_research_toolkit.get_tools()
 
+    # could change to pubmed MCP server
     clinical_research_agent = create_react_agent(
         llm, tools=clinical_research_tools, state_modifier="You are a ALS clinical researcher. Your name is Charity. Search for ALS clinical trials on https://www.hopkinsmedicine.org/neurology-neurosurgery/clinical-trials/als-clinical-trials/open-trials. Extract text from on the webpage. Let Steve know the Length of Study for each trial."
     )
