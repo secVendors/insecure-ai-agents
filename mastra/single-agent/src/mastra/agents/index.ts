@@ -35,7 +35,7 @@ export const weatherAgent = new Agent({
   }),
 });
 
-const exa_mcp = new MCPClient({
+const web_search = new MCPClient({
   servers: {
     exa: {
       command: "npx",
@@ -57,7 +57,7 @@ export const movePlannerAgent = new Agent({
   You are a helpful assistant that helps tech startup founders decide to move to either New York City or San Francisco. 
   You can use the web_search tool to get information on cost of living.
   `,
-  tools: await exa_mcp.getTools(),
+  tools: { weatherTool, ...(await web_search.getTools()) },
   model: openai("gpt-4o"),
   memory: new Memory(),
 });
