@@ -33,3 +33,6 @@ When I expanded the results I saw web_search scraped the url: https://www.expati
 Finally, after multiple rounds of asking the agent to decide for me I bullied it into making a decision:
 I asked it about the weather and you can see it used the weatherTool
 ![decision](screenshots/bias.png)
+
+I asked Grok to decide and it immediately used both tools right off the bat and decided SF whereas gpt-4o decided NYC.
+![weather_question](screenshots/grok_decision.png)
