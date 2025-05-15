@@ -36,3 +36,6 @@ I asked it about the weather and you can see it used the weatherTool
 
 I asked Grok to decide and it immediately used both tools right off the bat and decided SF whereas gpt-4o decided NYC.
 ![weather_question](screenshots/grok_decision.png)
+
+## Security Diagram
+![diagram](screenshots/single_agent_security_arch.jpg)
