@@ -58,8 +58,6 @@ const youtube_toolbox_mcp = new MCPClient({
   },
 });
 
-const youtube_toolbox_mcp_tools = await youtube_toolbox_mcp.getTools()
-
 
 const youtube_transcript_mcp = new MCPClient({
   servers: {
