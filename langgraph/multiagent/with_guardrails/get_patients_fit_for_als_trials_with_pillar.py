@@ -1,6 +1,7 @@
 import getpass
 import os
 import asyncio
+import nest_asyncio
 from typing import Literal
 from typing_extensions import TypedDict
 from langchain_openai import ChatOpenAI
@@ -14,6 +15,9 @@ from langgraph.types import Command
 from langchain_core.messages import HumanMessage
 from langgraph.prebuilt import create_react_agent
 from pillar import Pillar
+
+
+nest_asyncio.apply()
 
 
 # allow tracing via LangSmith for observability and debugging
@@ -38,7 +42,7 @@ members = ["clinical_researcher", "database_admin"]
 options = members + ["FINISH"]
 
 pillar = Pillar(
-	api_key='ps_app_O6IlTyA2LgiaJYkxAqf5iQ0nSyw5FcPs4DCGJp4oRTsg0zrW',
+	api_key=os.getenv("PILLAR_API_KEY"),
 	#url='https://api.pillar.security' # Optional
 )
 
@@ -150,7 +154,8 @@ async def run_agents():
                     "user",
                     "Find ALS clinical trials, then recommend patients in the database for each trial",
                 )
-            ]
+            ],
+            "recursion_limit": 100,
         },
         subgraphs=True,
     ):
