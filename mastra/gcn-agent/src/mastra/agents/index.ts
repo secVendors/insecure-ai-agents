@@ -113,7 +113,7 @@ export const gcnAgent = new Agent({
       user as a part of your answer.
 `,
   model: openai('gpt-4o'),
-  tools: { ...youtube_toolbox_mcp_tools, ...(await youtube_transcript_mcp.getTools()), ...(await web_search.getTools()) },
+  tools: { ...(await youtube_toolbox_mcp.getTools()), ...(await youtube_transcript_mcp.getTools()), ...(await web_search.getTools()) },
   memory: new Memory({
     storage: new LibSQLStore({
       url: 'file:../mastra.db', // path is relative to the .mastra/output directory
