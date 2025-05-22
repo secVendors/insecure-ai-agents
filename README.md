@@ -9,6 +9,7 @@
 - Mastra
   - Single Agent Examples
     - Helps you decide to move to SF or NYC, uses MCP servers and APIs to do research
+    - GCN Bike Maintenance Agent, has 3 MCP servers and scrapes Global Cycling Network (GCN) YouTube videos and explains them to the user
 - LangGraph
   - Multi Agent Examples
     - Helps match ALS patients in a local db with clinical trials found on the web
