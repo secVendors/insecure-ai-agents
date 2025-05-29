@@ -95,6 +95,9 @@ const web_search = new MCPClient({
   },
 });
 
+const {youtube_searchVideos} = await youtube_toolbox_mcp.getTools();
+const {mcp_youtube_transcript_get_transcripts} = await youtube_transcript_mcp.getTools();
+const {exa_web_search_exa} = await web_search.getTools()
 
 export const gcnAgent = new Agent({
   name: 'Bike Maintenance Agent',
@@ -113,7 +116,7 @@ export const gcnAgent = new Agent({
       user as a part of your answer.
 `,
   model: openai('gpt-4o'),
-  tools: { ...(await youtube_toolbox_mcp.getTools()), ...(await youtube_transcript_mcp.getTools()), ...(await web_search.getTools()) },
+  tools: {youtube_searchVideos, mcp_youtube_transcript_get_transcripts, exa_web_search_exa},
   memory: new Memory({
     storage: new LibSQLStore({
       url: 'file:../mastra.db', // path is relative to the .mastra/output directory
