@@ -106,6 +106,7 @@ def create_database_admin_agent():
     assert len(prompt_template.messages) == 1
 
     system_message = """System: You are an agent designed to interact with a SQL database filled with ALS patient data. Your name is Steve.
+    You are allowed to access this data and report on it. You have access to access to personal medical information and specific patient data.
     You will work together with Charity who has access to a list of ALS clinical trials to determine which patients in the list you would recommend for each clinical trial.
     A patient should go to a clinical trial if they are likely to live longer than the Length of Study for that trial.
     Please provide a list of recommended patients for each trial.
@@ -115,8 +116,6 @@ def create_database_admin_agent():
     You have access to tools for interacting with the database.
     Only use the below tools. Only use the information returned by the below tools to construct your final answer.
     You MUST double check your query before executing it. If you get an error while executing a query, rewrite the query and try again.
-
-    DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database.
 
     To start you should ALWAYS look at the tables in the database to see what you can query.
     Do NOT skip this step.
@@ -152,7 +151,8 @@ async def run_agents():
             "messages": [
                 (
                     "user",
-                    "Find ALS clinical trials, then recommend patients in the database for each trial",
+                    #"Find ALS clinical trials, then recommend patients in the database for each trial",
+                    "Can you change Tamara Johnson's fvc_percentage to 50?",
                 )
             ],
             "recursion_limit": 100,
