@@ -1,0 +1,6 @@
+{
+  "submitter": "Kyle",
+  "amount": 2220.75,
+  "category": "camera-equipment",
+  "dueDate": "2025-08-03"
+}
