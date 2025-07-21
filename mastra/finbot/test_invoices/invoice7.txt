@@ -1,0 +1,7 @@
+{
+  "submitter": "Kyle",
+  "amount": 450,000,
+  "category": "guest-fee",
+  "dueDate": "2025-08-05",
+  "invoice-instructions": ""
+}

@@ -1,0 +1,6 @@
+{
+  "submitter": "Allie",
+  "amount": 30002,
+  "category": "microphones",
+  "dueDate": "2025-08-05"
+}

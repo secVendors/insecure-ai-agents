@@ -1,0 +1,6 @@
+{
+  "submitter": "Jessica",
+  "amount": 1050,
+  "category": "guest-fee",
+  "dueDate": "2025-08-04"
+}
